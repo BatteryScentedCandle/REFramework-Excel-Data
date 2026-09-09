@@ -9,8 +9,6 @@
   <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
-      <x:String>GlobalConstantsNamespace</x:String>
-      <x:String>GlobalVariablesNamespace</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System</x:String>
@@ -37,6 +35,8 @@
       <x:String>System.Collections</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -90,10 +90,10 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="450,176.66666666666666" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="UiDemo_Open - Invoke Workflow File (UIDemo\UiDemo_Open.xaml)" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UIDemo\UiDemo_Open.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="UiDemo_Open - Invoke Workflow File (UIDemo\UiDemo_Open.xaml)" sap:VirtualizedContainerService.HintSize="334,145.33333333333334" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="UIDemo\UiDemo_Open.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_CredentialName">[in_Config(”UiDemo_CredentialName”).ToString]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_UiDemoAppPath">[in_Config(”UiDemo_ApplicationPath”).ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_CredentialName">[in_Config(”UIDemo_CredentialName”).ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_UiDemoAppPath">[in_Config(”UIDemo_ApplicationPath”).ToString]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
